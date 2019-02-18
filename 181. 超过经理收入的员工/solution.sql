@@ -1,0 +1,5 @@
+SELECT Name as Employee FROM EMPLOYEE AS a
+WHERE a.ManagerId IS NOT NULL AND a.SALARY > 
+(
+    SELECT Salary FROM EMPLOYEE WHERE Id = a.ManagerId
+)
